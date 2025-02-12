@@ -67,3 +67,10 @@ To run the service we use docker. From the root of the project, execute the foll
 Make sure Docker is installed and running on your machine before executing these commands.
 
 <hr/>
+
+## 3. Tests
+
+#### There are tests covering our routes, the domain and the service. You can execute the tests by opening a shell in the app container and running the command `pytest`.
+
+
+<hr/>

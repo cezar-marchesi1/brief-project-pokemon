@@ -19,7 +19,8 @@ def process_pokemons():
         data = request.get_json()
 
         if not data or 'pokemon_names' not in data or not isinstance(data['pokemon_names'], list):
-            return jsonify({'error': 'Invalid data. Expected a JSON with a list of Pokémon names.'}), 400
+            print('error: Invalid data. Expected a JSON with a list of Pokémon names.')
+            return jsonify({'error': 'Invalid data. Expected a JSON with a list `pokemon_names`'}), 400
 
         pokemon_names = data['pokemon_names']
 
@@ -56,6 +57,7 @@ def get_pokemons():
         return jsonify(result), 200
 
     except Exception as e:
+        print(f'error: {str(e)}')
         return jsonify({'error': str(e)}), 500
 
 
